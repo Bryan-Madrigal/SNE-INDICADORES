@@ -1,0 +1,183 @@
+/* =========================================================
+   SEARCH BAR + FILTROS
+   ========================================================= */
+
+.buscador {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+/* =========================================================
+   FILA 1: INPUT + FILTROS
+   ========================================================= */
+
+.buscador-fila {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* -------- Input de búsqueda -------- */
+
+.buscador-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 280px;
+  min-width: 260px;
+}
+
+.buscador-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #4b5563;
+  margin: 0;
+}
+
+.buscador-input-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.buscador-icono {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.buscador-input {
+  width: 100%;
+  padding: 9px 14px 9px 38px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #111827;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.buscador-input::placeholder {
+  color: #9ca3af;
+}
+
+.buscador-input:hover {
+  border-color: #9ca3af;
+}
+
+.buscador-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* -------- Filtros (a la derecha del input) -------- */
+
+.buscador-filtros {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.buscador-filtros > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.buscador-filtros label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #4b5563;
+  margin: 0;
+}
+
+.buscador-filtros select {
+  min-width: 160px;
+  padding: 9px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: #ffffff;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+
+.buscador-filtros select:hover {
+  border-color: #9ca3af;
+}
+
+.buscador-filtros select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* =========================================================
+   FILA 2: ACCIONES (botones alineados a la IZQUIERDA)
+   ========================================================= */
+
+.buscador-acciones {
+  display: flex;
+  justify-content: flex-start;   /* ← Alineados a la izquierda */
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .buscador-fila {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buscador-input-wrapper {
+    min-width: 100%;
+  }
+
+  .buscador-filtros {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buscador-filtros > div {
+    width: 100%;
+  }
+
+  .buscador-filtros select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .buscador-acciones {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .buscador-acciones .btn {
+    min-width: 140px;
+  }
+}

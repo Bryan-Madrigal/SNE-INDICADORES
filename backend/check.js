@@ -1,0 +1,1 @@
+require('dotenv').config({path: './backend/.env'}); const { poolPromise } = require('./backend/src/db/dbConnect'); poolPromise.then(p => p.request().query('SELECT HAS_PERMS_BY_NAME(\'sp_GetResumenKPIs\', \'OBJECT\', \'EXECUTE\') AS has1').then(console.dir)).finally(()=>process.exit());

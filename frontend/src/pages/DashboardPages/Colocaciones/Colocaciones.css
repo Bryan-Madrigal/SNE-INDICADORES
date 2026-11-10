@@ -1,0 +1,325 @@
+/* =========================================================
+   COLOCACIONES
+   Solo estilos específicos del módulo.
+   Los estilos generales los maneja CommonModule.css
+   y los componentes comunes.
+========================================================= */
+
+/* =========================================================
+   BOTÓN VER COLOCACIÓN
+========================================================= */
+
+.btn-ver-colocacion {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  min-width: 70px;
+}
+
+.btn-ver-colocacion:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+.btn-ver-colocacion:active {
+  background: #bfdbfe;
+}
+
+.btn-ver-colocacion svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   EFECTIVIDAD DEL PROCESO
+========================================================= */
+
+.col-efectividad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 16px 0;
+}
+
+.col-efectividad-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 18px 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.col-efectividad-box.blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.col-efectividad-box.green {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.col-efectividad-box p {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.col-efectividad-box strong {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.col-tasa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+  margin-top: 8px;
+}
+
+.col-tasa span {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.col-tasa strong {
+  font-size: 1.1rem;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* =========================================================
+   RESUMEN DE RESULTADOS
+========================================================= */
+
+.col-resumen {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px 0;
+}
+
+.col-resumen > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.col-resumen > div:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.col-resumen span {
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.col-resumen strong {
+  font-size: 0.9rem;
+  color: #1e293b;
+  font-weight: 700;
+  text-align: right;
+}
+
+.green-text {
+  color: #059669 !important;
+}
+
+.blue-text {
+  color: #2563eb !important;
+}
+
+.orange-text {
+  color: #ea580c !important;
+}
+
+/* =========================================================
+   MODAL DE COLOCACIÓN (CLASES ÚNICAS - SIN CONFLICTOS)
+========================================================= */
+
+.colocaciones-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.colocaciones-modal {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff !important;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.25);
+  overflow: hidden;
+  z-index: 10000;
+}
+
+/* ---------- HEADER ---------- */
+
+.colocaciones-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.colocaciones-modal-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.colocaciones-modal-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #ecfdf5;
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.colocaciones-modal-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.colocaciones-modal-header p {
+  margin: 3px 0 0;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.colocaciones-modal-close {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.colocaciones-modal-close:hover {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* ---------- BODY ---------- */
+
+.colocaciones-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+  padding: 22px;
+  background: #ffffff;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.colocaciones-modal-grid > div {
+  min-width: 0;
+}
+
+.colocaciones-modal-grid p {
+  margin: 0 0 5px;
+  color: #94a3b8;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.colocaciones-modal-grid strong {
+  color: #1e293b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  word-break: break-word;
+  display: inline-block;
+}
+
+/* ---------- FOOTER ---------- */
+
+.colocaciones-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 22px;
+  border-top: 1px solid #f1f5f9;
+  background: #f8fafc;
+  flex-shrink: 0;
+}
+
+.colocaciones-modal-footer .btn-modal-cerrar {
+  height: 38px;
+  padding: 0 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.colocaciones-modal-footer .btn-modal-cerrar:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 640px) {
+  .colocaciones-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}

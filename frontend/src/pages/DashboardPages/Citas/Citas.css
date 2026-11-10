@@ -1,0 +1,399 @@
+/* =========================================================
+   CITAS
+   Solo estilos específicos del módulo.
+   Los estilos generales los maneja CommonModule.css
+   y los componentes comunes.
+========================================================= */
+
+/* =========================================================
+   RESUMEN POR ESTADO - DISEÑO BONITO
+========================================================= */
+
+.estados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  padding: 18px 20px 22px;
+}
+
+.estado-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.estado-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.estado-card-icono {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  flex-shrink: 0;
+}
+
+.estado-card-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.estado-card-nombre {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.estado-card-valor {
+  margin: 4px 0 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1;
+}
+
+/* ---------- Verde (Atendidas) ---------- */
+
+.estado-card--verde {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.estado-card--verde .estado-card-icono {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.estado-card--verde .estado-card-valor {
+  color: #16a34a;
+}
+
+/* ---------- Azul (Activas / Programadas) ---------- */
+
+.estado-card--azul {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.estado-card--azul .estado-card-icono {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.estado-card--azul .estado-card-valor {
+  color: #2563eb;
+}
+
+/* ---------- Rojo (No se presentó) ---------- */
+
+.estado-card--rojo {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.estado-card--rojo .estado-card-icono {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.estado-card--rojo .estado-card-valor {
+  color: #dc2626;
+}
+
+/* ---------- Naranja (No contestó) ---------- */
+
+.estado-card--naranja {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.estado-card--naranja .estado-card-icono {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.estado-card--naranja .estado-card-valor {
+  color: #ea580c;
+}
+
+/* ---------- Gris (Cancelada / Otros) ---------- */
+
+.estado-card--gris {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+.estado-card--gris .estado-card-icono {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.estado-card--gris .estado-card-valor {
+  color: #64748b;
+}
+
+/* =========================================================
+   PRÓXIMAS CITAS (sección extra)
+========================================================= */
+
+.lista-proximas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 0 20px 20px;
+}
+
+.item-proxima {
+  display: grid;
+  grid-template-columns: 220px 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 14px;
+  border: 1px solid #f1f5f9;
+  border-radius: 10px;
+  background: #f8fafc;
+  transition: 0.2s ease;
+}
+
+.item-proxima:hover {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
+.fecha-proxima {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fecha-proxima > svg {
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.fecha-proxima strong {
+  display: block;
+  color: #334155;
+  font-size: 13px;
+}
+
+.fecha-proxima span {
+  display: block;
+  margin-top: 3px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.info-proxima {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.info-proxima strong {
+  color: #334155;
+  font-size: 13px;
+}
+
+.info-proxima span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =========================================================
+   MODAL DE CITA (CLASES ÚNICAS - SIN CONFLICTOS)
+========================================================= */
+
+.citas-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.citas-modal {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff !important;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.25);
+  overflow: hidden;
+  z-index: 10000;
+}
+
+/* ---------- HEADER ---------- */
+
+.citas-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.citas-modal-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.citas-modal-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.citas-modal-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.citas-modal-header p {
+  margin: 3px 0 0;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.citas-modal-close {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.citas-modal-close:hover {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* ---------- BODY ---------- */
+
+.citas-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+  padding: 22px;
+  background: #ffffff;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.citas-modal-grid > div {
+  min-width: 0;
+}
+
+.citas-modal-grid p {
+  margin: 0 0 5px;
+  color: #94a3b8;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.citas-modal-grid strong {
+  color: #1e293b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  word-break: break-word;
+  display: inline-block;
+}
+
+/* ---------- FOOTER ---------- */
+
+.citas-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 22px;
+  border-top: 1px solid #f1f5f9;
+  background: #f8fafc;
+  flex-shrink: 0;
+}
+
+.citas-modal-footer .btn-modal-cerrar {
+  height: 38px;
+  padding: 0 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.citas-modal-footer .btn-modal-cerrar:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .estados-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .item-proxima {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .estados-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .citas-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}

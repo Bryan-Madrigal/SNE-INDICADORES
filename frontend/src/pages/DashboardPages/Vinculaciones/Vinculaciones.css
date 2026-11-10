@@ -1,0 +1,386 @@
+/* =========================================================
+   VINCULACIONES
+   Solo estilos específicos del módulo.
+   Los estilos generales los maneja CommonModule.css
+   y los componentes comunes.
+========================================================= */
+
+/* =========================================================
+   LISTAS DE BARRAS (gráficos)
+========================================================= */
+
+.lista-barras {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.barra-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.barra-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.barra-item-header span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.barra-item-header strong {
+  color: #1e293b;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.barra-fondo {
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f1f5f9;
+}
+
+/* CAMBIADO: azul -> rojo vino */
+.barra-progreso {
+  height: 100%;
+  border-radius: inherit;
+  background: #9d2449;
+  transition: width 0.3s ease;
+}
+
+/* Morado se mantiene (para consejeros) */
+/* DESPUÉS */
+.barra-progreso-morado {
+  background: #9d2449;   /* Rojo vino */
+}
+
+/* =========================================================
+   EMPRESAS RESUMEN (lista)
+========================================================= */
+
+.empresa-resumen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  background: #f8fafc;
+  transition: all 0.15s ease;
+}
+
+.empresa-resumen:hover {
+  background: #fdf2f6;
+  border-color: #f8c8d8;
+}
+
+.empresa-resumen span {
+  color: #475569;
+  font-size: 0.82rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empresa-resumen strong {
+  color: #1e293b;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   EFECTIVIDAD RESUMEN (destacado)
+   Verde se mantiene porque indica "éxito"
+========================================================= */
+
+.efectividad-resumen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 24px 20px;
+  margin: 18px 20px 8px;
+  border-radius: 12px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.efectividad-resumen strong {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #16a34a;
+  line-height: 1;
+}
+
+.efectividad-resumen span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #16a34a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.texto-secundario {
+  padding: 0 20px 20px;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================================================
+   RENDIMIENTO LISTA
+========================================================= */
+
+.rendimiento-lista {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rendimiento-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.rendimiento-item svg {
+  flex-shrink: 0;
+}
+
+.rendimiento-item span {
+  flex: 1;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.rendimiento-item strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.rendimiento-item.verde {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+.rendimiento-item.verde svg {
+  color: #16a34a;
+}
+.rendimiento-item.verde strong {
+  color: #16a34a;
+}
+
+.rendimiento-item.naranja {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+.rendimiento-item.naranja svg {
+  color: #ea580c;
+}
+.rendimiento-item.naranja strong {
+  color: #ea580c;
+}
+
+.rendimiento-item.gris {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+.rendimiento-item.gris svg {
+  color: #64748b;
+}
+.rendimiento-item.gris strong {
+  color: #64748b;
+}
+
+/* =========================================================
+   MODAL DE VINCULACIÓN (CLASES ÚNICAS - SIN CONFLICTOS)
+========================================================= */
+
+.vinculaciones-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.vinculaciones-modal {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff !important;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.25);
+  overflow: hidden;
+  z-index: 10000;
+}
+
+/* ---------- HEADER ---------- */
+
+.vinculaciones-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.vinculaciones-modal-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* CAMBIADO: azul -> rojo vino */
+.vinculaciones-modal-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fce7ef;
+  color: #9d2449;
+  flex-shrink: 0;
+}
+
+.vinculaciones-modal-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.vinculaciones-modal-header p {
+  margin: 3px 0 0;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.vinculaciones-modal-close {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* CAMBIADO: hover rojo vino */
+.vinculaciones-modal-close:hover {
+  background: #fdf2f6;
+  color: #9d2449;
+}
+
+/* ---------- BODY ---------- */
+
+.vinculaciones-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+  padding: 22px;
+  background: #ffffff;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.vinculaciones-modal-grid > div {
+  min-width: 0;
+}
+
+.vinculaciones-modal-grid p {
+  margin: 0 0 5px;
+  color: #94a3b8;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.vinculaciones-modal-grid strong {
+  color: #1e293b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  word-break: break-word;
+  display: inline-block;
+}
+
+/* ---------- FOOTER ---------- */
+
+.vinculaciones-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 22px;
+  border-top: 1px solid #f1f5f9;
+  background: #f8fafc;
+  flex-shrink: 0;
+}
+
+.vinculaciones-modal-footer .btn-modal-cerrar {
+  height: 38px;
+  padding: 0 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* CAMBIADO: hover rojo vino */
+.vinculaciones-modal-footer .btn-modal-cerrar:hover {
+  background: #fdf2f6;
+  border-color: #e8a5be;
+  color: #9d2449;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 640px) {
+  .vinculaciones-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .efectividad-resumen strong {
+    font-size: 2rem;
+  }
+}

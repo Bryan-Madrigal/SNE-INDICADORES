@@ -1,0 +1,77 @@
+Listado de rutas de carpetas para el volumen OS
+El número de serie del volumen es 0000027F C402:C02D
+C:\USERS\BRYAN\DOWNLOADS\INDICADORESSNE3\FRONTEND\SRC
+¦   App.css
+¦   App.jsx
+¦   index.css
+¦   main.jsx
+¦   
++---assets
+¦       hero.png
+¦       react.svg
+¦       vite.svg
+¦       
++---components
+¦       CausasChart.jsx
+¦       DemograficoLaboralChart.jsx
+¦       GeographicChart.jsx
+¦       KPICards.jsx
+¦       PeriodChart.jsx
+¦       ProtectedRoute.jsx
+¦       
++---context
+¦       AuthContext.jsx
+¦       
++---controllers
++---pages
+¦   ¦   AsignacionMetasGlobales.jsx
+¦   ¦   Avances.jsx
+¦   ¦   Configuracion.jsx
+¦   ¦   Dashboard.jsx
+¦   ¦   DashboardHome.jsx
+¦   ¦   Login.jsx
+¦   ¦   MetasCRUD.jsx
+¦   ¦   OficinaBuscadoresParticipacion.jsx
+¦   ¦   ReportesGenerales.jsx
+¦   ¦   TipoMetaParticipacion.jsx
+¦   ¦   
+¦   +---DashboardPages
+¦       +---Atenciones
+¦       ¦       Atenciones.css
+¦       ¦       Atenciones.jsx
+¦       ¦       AtencionesData.js
+¦       ¦       
+¦       +---BuscadoresEmpleo
+¦       ¦       BuscadoresEmpleo.css
+¦       ¦       BuscadoresEmpleo.jsx
+¦       ¦       BuscadoresEmpleoData.js
+¦       ¦       
+¦       +---Citas
+¦       ¦       Citas.css
+¦       ¦       Citas.jsx
+¦       ¦       CitasData.js
+¦       ¦       
+¦       +---Colocaciones
+¦       ¦       Colocaciones.css
+¦       ¦       Colocaciones.jsx
+¦       ¦       ColocacionesData.js
+¦       ¦       
+¦       +---EmpresasAtendidas
+¦       ¦       EmpresasAtendidas.css
+¦       ¦       EmpresasAtendidas.jsx
+¦       ¦       EmpresasAtendidasData.js
+¦       ¦       
+¦       +---OfertasActivas
+¦       ¦   ¦   OfertasActivas.css
+¦       ¦   ¦   OfertasActivas.jsx
+¦       ¦   ¦   OfertasActivasData.js
+¦       ¦   ¦   
+¦       ¦   +---components
+¦       +---Vinculaciones
+¦               Vinculaciones.css
+¦               Vinculaciones.jsx
+¦               VinculacionesData.js
+¦               
++---services
+        api.js
+        

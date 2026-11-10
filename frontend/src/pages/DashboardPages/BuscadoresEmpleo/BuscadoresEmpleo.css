@@ -1,0 +1,404 @@
+/* =========================================================
+   BUSCADORES DE EMPLEO
+   Solo estilos específicos del módulo.
+   Los estilos generales los maneja CommonModule.css.
+========================================================= */
+
+/* =========================================================
+   LISTAS DE BARRAS (Escolaridad, Situación Laboral)
+========================================================= */
+
+.lista-barras {
+  padding: 18px 20px 20px;
+}
+
+.barra-item {
+  margin-bottom: 16px;
+}
+
+.barra-item:last-child {
+  margin-bottom: 0;
+}
+
+.barra-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.barra-item-header span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.barra-item-header strong {
+  color: #1e293b;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.barra-fondo {
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f1f5f9;
+}
+
+/* CAMBIADO: azul -> rojo vino */
+.barra-progreso {
+  height: 100%;
+  border-radius: inherit;
+  background: #9d2449;
+  transition: width 0.3s ease;
+}
+
+.barra-progreso-orange {
+  background: #fb923c;
+}
+
+/* =========================================================
+   ESTADO DE BUSCADORES (tarjetas de resumen)
+========================================================= */
+
+.estado-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  padding: 18px 20px 20px;
+}
+
+.estado-resumen {
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.estado-resumen:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(157, 36, 73, 0.08);
+}
+
+.estado-resumen p {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.estado-resumen-valor {
+  margin-top: 5px !important;
+  color: #1e293b;
+  font-size: 1.45rem;
+  font-weight: 700;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+/* Fondos de las tarjetas de estado */
+.estado-resumen-gris {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+/* CAMBIADO: azul -> rosa/rojo vino */
+.estado-resumen-blue {
+  background: #fce7ef;
+  border-color: #f8c8d8;
+}
+
+/* =========================================================
+   MODAL DE BUSCADOR (CLASES ÚNICAS - SIN CONFLICTOS)
+========================================================= */
+
+.buscadores-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.buscadores-modal {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff !important;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.25);
+  overflow: hidden;
+  z-index: 10000;
+}
+
+/* ---------- HEADER ---------- */
+
+.buscadores-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.buscadores-modal-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* CAMBIADO: morado -> rojo vino */
+.buscadores-modal-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fce7ef;
+  color: #9d2449;
+  flex-shrink: 0;
+}
+
+.buscadores-modal-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.buscadores-modal-header p {
+  margin: 3px 0 0;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.buscadores-modal-close {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* CAMBIADO: hover rojo vino */
+.buscadores-modal-close:hover {
+  background: #fdf2f6;
+  color: #9d2449;
+}
+
+/* ---------- BODY ---------- */
+
+.buscadores-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+  padding: 22px;
+  background: #ffffff;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.buscadores-modal-grid > div {
+  min-width: 0;
+}
+
+.buscadores-modal-grid p {
+  margin: 0 0 5px;
+  color: #94a3b8;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.buscadores-modal-grid strong {
+  color: #1e293b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  word-break: break-word;
+  display: inline-block;
+}
+
+/* ---------- FOOTER ---------- */
+
+.buscadores-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 22px;
+  border-top: 1px solid #f1f5f9;
+  background: #f8fafc;
+  flex-shrink: 0;
+}
+
+.buscadores-modal-footer .btn-modal-cerrar {
+  height: 38px;
+  padding: 0 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* CAMBIADO: hover rojo vino */
+.buscadores-modal-footer .btn-modal-cerrar:hover {
+  background: #fdf2f6;
+  border-color: #e8a5be;
+  color: #9d2449;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .estado-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .buscadores-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .estado-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 15px 16px 16px;
+  }
+
+  .lista-barras {
+    padding: 15px 16px 16px;
+  }
+
+  .buscadores-modal-overlay {
+    padding: 12px;
+  }
+
+  .buscadores-modal {
+    max-height: 94vh;
+    border-radius: 13px;
+  }
+
+  .buscadores-modal-grid {
+    padding: 18px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .estado-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .estado-resumen {
+    min-height: 80px;
+    padding: 10px;
+  }
+
+  .estado-resumen-valor {
+    font-size: 1.25rem;
+  }
+
+  .buscadores-modal-header {
+    padding: 15px 16px;
+  }
+
+  .buscadores-modal-footer {
+    padding: 13px 16px;
+  }
+}
+
+/* =========================================================
+   TABLA - SCROLL HORIZONTAL
+========================================================= */
+
+.card-tabla .table-wrapper,
+.card-tabla .data-table-wrapper,
+.card-tabla .table-scroll,
+.card-tabla > div:not(.section-header):not(.tabla-paginacion) {
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card-tabla table,
+.card-tabla .data-table {
+  min-width: 1200px;
+  width: 100%;
+}
+
+.card-tabla {
+  overflow: visible !important;
+  border-radius: var(--radius-md);
+}
+
+.card-tabla .section-header {
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+}
+
+.card-tabla .tabla-paginacion {
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+}
+
+.card-tabla .table-wrapper::-webkit-scrollbar,
+.card-tabla .table-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-tabla .table-wrapper::-webkit-scrollbar-track,
+.card-tabla .table-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+/* CAMBIADO: thumb rosa suave */
+.card-tabla .table-wrapper::-webkit-scrollbar-thumb,
+.card-tabla .table-scroll::-webkit-scrollbar-thumb {
+  background: #f8c8d8;
+  border-radius: 4px;
+}
+
+.card-tabla .table-wrapper::-webkit-scrollbar-thumb:hover,
+.card-tabla .table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #e8a5be;
+}
